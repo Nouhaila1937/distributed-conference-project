@@ -20,3 +20,7 @@ Keynote Service                  Conference Service
 (REST API, Swagger, Resilience4J)  (REST API, Reviews, Feign Client)
 |
 Database (H2/PostgreSQL)
+
+
+## Test conference-service 
+![img.png](img.png)
