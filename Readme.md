@@ -24,3 +24,11 @@ Database (H2/PostgreSQL)
 
 ## Test conference-service 
 ![img.png](img.png)
+![img_1.png](img_1.png)
+
+## Test keynote-service
+![img_2.png](img_2.png)
+
+
+
+
