@@ -2,6 +2,8 @@ package org.example.conferenceservice.Web;
 import org.example.conferenceservice.DTO.ConferenceDTO;
 import org.example.conferenceservice.DTO.ReviewDTO;
 import org.example.conferenceservice.Service.ConferenceService;
+import org.example.conferenceservice.feign.KeynoteRestClient;
+import org.example.conferenceservice.feign.dto.keynoteDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +15,11 @@ import java.util.List;
 public class ConferenceController {
 
     private final ConferenceService service;
+    private final KeynoteRestClient keynoteRestClient;
 
-    public ConferenceController(ConferenceService service) {
+    public ConferenceController(ConferenceService service, KeynoteRestClient keynoteRestClient) {
         this.service = service;
+        this.keynoteRestClient = keynoteRestClient;
     }
 
     // =======================
@@ -64,4 +68,9 @@ public class ConferenceController {
         return ResponseEntity.ok(reviews);
     }
 
+
+    @GetMapping("/with-keynotes")
+    public List<keynoteDTO> getKeynotesFromKeynoteService() {
+        return keynoteRestClient.getAllKeynotes();
+    }
 }

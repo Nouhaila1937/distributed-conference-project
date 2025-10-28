@@ -35,3 +35,9 @@ Database (H2/PostgreSQL)
 ![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 
+
+## Test Feign coté conference
+![img_7.png](img_7.png)
+
+
+
